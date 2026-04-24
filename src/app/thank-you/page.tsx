@@ -1,3 +1,10 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Thank You",
+  robots: { index: false },
+};
+
 export default function ThankYouPage() {
   return (
     <div className="mt-[20vh] text-center">

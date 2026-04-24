@@ -8,17 +8,29 @@ import Footer from "@/components/Footer";
 const raleway = Raleway({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CREATUAL - DESIGN AND INNOVATION STUDIO",
+  metadataBase: new URL("https://creatual.io"),
+  title: {
+    default: "CREATUAL - Design & Innovation Studio",
+    template: "%s | CREATUAL",
+  },
   description:
     "A Multi-Disciplinary Digital Design & Innovation Studio Specializing in Web Development in All Disciplines and Graphic Design for All Platforms",
   keywords:
     "Fluid Creativity, motion graphics, signage strategy, Web Development, Amazon Web Services Development, creative processes, digital workshop, innovation design studio, next.js projects, react.js",
+  alternates: { canonical: "/" },
   openGraph: {
     url: "https://creatual.io",
     type: "website",
-    title: "Creatual Design - Fluid Creativity",
-    description: "A Multi-Disciplinary Digital Design & Innovation Workshop",
-    images: ["https://creatual.io/images/thumbnail-creatualio.png"],
+    siteName: "CREATUAL",
+    title: "CREATUAL - Fluid Creativity",
+    description: "A Multi-Disciplinary Digital Design & Innovation Studio",
+    images: [{ url: "/images/thumbnail-creatualio.png", width: 1200, height: 630, alt: "CREATUAL Design Studio" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CREATUAL - Fluid Creativity",
+    description: "A Multi-Disciplinary Digital Design & Innovation Studio",
+    images: ["/images/thumbnail-creatualio.png"],
   },
   manifest: "/manifest.webmanifest",
   icons: [
