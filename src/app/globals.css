@@ -1,26 +1,51 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand: #1eb2f1;
+  --color-brand-dark: #01418aeb;
+  --color-btn: #2472c0;
+  --color-btn-hover: #2383cc;
+  --animate-fade-in: fade-in 1s ease-in-out;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+
+/* Form styling */
+input,
+textarea {
+  color: #ffffffd8;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #ffffff46 !important;
+}
+
+input:focus,
+textarea:focus {
+  background-color: transparent;
+  color: #ffffffd8;
+  outline: none;
 }
